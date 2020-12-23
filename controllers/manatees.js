@@ -55,6 +55,8 @@ router.post('/seed',(req,res)=>{
                     punchline: "Sitting in a cabanatee sipping on a banatee daquiri"
                 },
             ]).then(data=>res.json("seeded"))
+        } else {
+            return res.json('data already exists!')
         }
     })
 })
